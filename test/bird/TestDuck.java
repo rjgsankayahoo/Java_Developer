@@ -4,6 +4,7 @@ import org.junit.Test;
 public class TestDuck {
 
 	Bird duck= new Duck();
+	
 	@Test
 	public void duckCannotTalk() {
 		Assert.assertTrue(duck.talk());
