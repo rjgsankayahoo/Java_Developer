@@ -6,10 +6,11 @@ import org.junit.Test;
 
 import bird.Bird;
 import bird.characteristics.Gender;
+import bird.characteristics.Language;
 public class TestChicken {
 
 	Chicken chicken= new Chicken();
-	Chicken rooster= new Chicken(Gender.MALE);
+	Chicken rooster= new Chicken(Gender.MALE,Language.DANISH);
 	
 	@Test
 	public void chickenCanTalk() {

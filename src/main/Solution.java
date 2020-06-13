@@ -6,6 +6,7 @@ import bird.Chicken;
 import bird.Duck;
 import bird.Parrot;
 import bird.characteristics.Gender;
+import bird.characteristics.Language;
 import bird.characteristics.Neighbour;
 import fish.ClownFish;
 import fish.Dolphin;
@@ -21,14 +22,14 @@ public class Solution {
 		Integer numberOfAnimalsThatCanFly = 0, numberOfAnimalsThatCanSing = 0, numberOfAnimalsThatCanWalk = 0,
 				numberOfAnimalsThatCanSwim = 0, numberOfAnimalsThatCanTalk = 0;
 
-		Animal[] animals = new Animal[] { new Bird(), new Duck(), new Chicken(Gender.FEMALE),
-				new Chicken(Gender.MALE), new Parrot(), new Parrot(Neighbour.DOGS), new Fish(),
+		Animal[] animals = new Animal[] { new Bird(), new Duck(), new Chicken(),
+				new Chicken(Gender.MALE,Language.DANISH), new Parrot(), new Parrot(Neighbour.DOGS), new Fish(),
 				new Shark(), new ClownFish(), new Dolphin(), new Frog(), new Dog(), new Butterfly(3), new Cat() };
 
 		for (Animal animal : animals) {
 			if (animal.fly()) {
 				numberOfAnimalsThatCanFly++;
-			}
+			} 
 			if (animal.walk()) {
 				numberOfAnimalsThatCanWalk++;
 			}

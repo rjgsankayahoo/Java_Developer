@@ -1,13 +1,19 @@
 package bird;
 
 import bird.characteristics.Gender;
+import bird.characteristics.Language;
 
 public class Chicken extends Bird {
 
 	private Gender gender;
 
-	public Chicken(Gender gender) {
+	private Language language = Language.ENGLISH;
+
+	public Chicken(Gender gender, Language language) {
 		this.gender = gender;
+		if (this.gender == Gender.MALE) {
+			this.language = language;
+		}
 	}
 
 	public Chicken() {
@@ -17,7 +23,7 @@ public class Chicken extends Bird {
 	@Override
 	public boolean talk() {
 		if (this.getGender() == Gender.MALE) {
-			System.out.println("I am Rooster. I say Cock-a-doodle-doo.");
+			System.out.println("I am Rooster. I say "+language.getSound());
 		} else {
 			System.out.println("I am Chicken. I say Cluck, cluck.");
 		}
