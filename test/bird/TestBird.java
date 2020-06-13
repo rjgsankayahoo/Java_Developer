@@ -12,8 +12,8 @@ public class TestBird {
 	Bird bird = new Bird();
 
 	@Test
-	public void birdCannotWalk() {
-		Assert.assertFalse(bird.walk());
+	public void birdCanWalk() {
+		Assert.assertTrue(bird.walk());
 	}
 
 	@Test

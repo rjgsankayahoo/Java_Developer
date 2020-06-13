@@ -5,9 +5,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import bird.Bird;
+import bird.characteristics.Gender;
 public class TestChicken {
 
 	Chicken chicken= new Chicken();
+	Chicken rooster= new Chicken(Gender.MALE);
 	
 	@Test
 	public void chickenCanTalk() {
@@ -20,8 +22,23 @@ public class TestChicken {
 	}
 	
 	@Test
-	public void chickenCannotWalk() {
+	public void chickenCanWalk() {
 		Assert.assertTrue(chicken.walk());
+	}
+	
+	@Test
+	public void roosterCanTalk() {
+		Assert.assertTrue(rooster.talk());
+	}
+	
+	@Test
+	public void roosterCanFly() {
+		Assert.assertTrue(rooster.fly());
+	}
+	
+	@Test
+	public void roosterCanWalk() {
+		Assert.assertTrue(rooster.walk());
 	}
 	
 }
