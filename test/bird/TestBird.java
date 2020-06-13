@@ -1,28 +1,38 @@
-package animal;
+package bird;
+
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import animal.Bird;
+import bird.Bird;
+
 public class TestBird {
+
+	Bird bird = new Bird();
 
 	@Test
 	public void birdCannotWalk() {
-		Bird bird= new Bird();
 		Assert.assertFalse(bird.walk());
 	}
-	
+
 	@Test
 	public void birdCanSing() {
-		Bird bird= new Bird();
 		Assert.assertTrue(bird.sing());
 	}
-	
+
 	@Test
 	public void birdCanFly() {
-		Bird bird= new Bird();
 		Assert.assertTrue(bird.fly());
 	}
 
+	@Test
+	public void birdCannotSwim() {
+		Assert.assertFalse(bird.swim());
+	}
+
+	@Test
+	public void birdCannotTalk() {
+		Assert.assertFalse(bird.talk());
+	}
 }

@@ -1,4 +1,4 @@
-package animal;
+package bird;
 
 
 import animal.Animal;
